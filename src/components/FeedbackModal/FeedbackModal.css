@@ -1,0 +1,157 @@
+.feedback-container {
+    font-family: 'Arial', sans-serif;
+
+
+}
+
+.feedback-trigger {
+    background-color: #4a6bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-trigger:hover {
+    background-color: #3a5bef;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.feedback-modal {
+    background-color: #0C0B36;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #FFFFFF;
+    line-height: 1.4;
+}
+
+.rating-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.rating-number {
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+    border: 1px solid #ddd;
+    background-color: black;
+    color: #333;
+    font-size: 14px;
+    color: #332EBD;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-number:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.rating-number.hovered {
+    background-color: #f0f0f0;
+}
+
+.rating-number.selected {
+    background-color: #4a6bff;
+    color: white;
+    border-color: #4a6bff;
+}
+
+.rating-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 340px;
+}
+
+.cancel-button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancel-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.cancel-button:hover {
+    background-color: #f5f5f5;
+}
+
+.submit-button {
+    background-color: #4a6bff;
+    color: white;
+    border: none;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #3a5bef;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .feedback-modal {
+        padding: 20px;
+    }
+
+    .rating-number {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+}
